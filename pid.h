@@ -13,20 +13,8 @@ class PID_c {
 
     }
 
-    float Kp;
-    float FeedbackSignal;
-    float errorSignal;
 
-    void initialisePIDs(){
-      Kp = 10;
-      FeedbackSignal = 0;
-    }
 
-    float updatePID(float demand, float measurement){
-      errorSignal = demand - measurement;
-      FeedbackSignal = Kp*errorSignal;
-      return FeedbackSignal;
-    }
 
 };
 

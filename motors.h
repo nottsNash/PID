@@ -26,12 +26,12 @@ class Motors_c {
     int rescaler(int PWMvalue, int maxPWM) {
         if (PWMvalue > maxPWM) {
             PWMvalue = maxPWM;
-            Serial.print("overspeeding error left +60");
-            Serial.print("\n");
+            //Serial.print("overspeeding error left +60");
+            //Serial.print("\n");
         } else if (PWMvalue < -maxPWM){
             PWMvalue = -maxPWM;
-            Serial.print("overspeeding error left -60");
-            Serial.print("\n");
+            //Serial.print("overspeeding error left -60");
+            //Serial.print("\n");
          }
 
          return PWMvalue;
@@ -59,7 +59,7 @@ class Motors_c {
         leftPWM = 0;
         Direction(rightPWM, R_DIR_PIN, R_PWM_PIN);
         Direction(leftPWM, L_DIR_PIN, L_PWM_PIN);
-        Serial.println("Motors moved");
+        //Serial.println("Motors moved");
     }
 };
 
